@@ -3,11 +3,18 @@
 int main(){
     float peso, altura, imc;
     
-    printf("Ingrese el peso en kg: ");
-    scanf("%f", &peso);
-    printf("\nIngrese la altura en metros: ");
-    scanf("%f", &altura);
+    do{
+        printf("\nIngrese el peso en kg: ");
+        scanf("%f", &peso);
+        printf("\nIngrese la altura en metros: ");
+        scanf("%f", &altura);
+        
+    if(peso <= 0 || altura <= 0){
+        printf("\nLos valores deben ser positivos");
 
+    }
+   }while(peso <= 0 || altura <= 0);
+   
     imc = peso / (altura*altura);
     
     printf("\nSu indice de masa corporal es: %.2f", imc);
